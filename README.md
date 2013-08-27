@@ -30,6 +30,7 @@ osx => http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui
 linux => http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.1.3-linux-ia32.7z/download
 
 浏览器插件：
+
 chrome：SwitchySharp
 
 firefox：AutoProxy
