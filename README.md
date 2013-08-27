@@ -3,6 +3,8 @@ oneclicktoss
 
 oneclicktoss V0.1
 
+Only support CentOS 6.0+
+
 默认服务器端口：8989
 
 默认客户端端口：1999
