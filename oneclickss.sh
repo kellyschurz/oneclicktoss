@@ -41,8 +41,8 @@ fi
 yum -y install wget unzip >> installss.log 2>&1
 echo "Install environment success"
 
-wget http://nodejs.org/dist/v0.10.17/node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
-wget https://codeload.github.com/clowwindy/shadowsocks-nodejs/zip/master >> installss.log 2>&1
+wget https://raw.github.com/kellyschurz/oneclicktoss/master/node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
+wget https://raw.github.com/kellyschurz/oneclicktoss/master/shadowsocks-nodejs-master.zip >> installss.log 2>&1
 echo "Download nodejs and shadowsocks success"
 
 tar -zxvf node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
