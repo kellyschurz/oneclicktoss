@@ -1,7 +1,7 @@
 oneclicktoss
 ============
 
-oneclicktoss V0.1
+oneclicktoss V1.0
 
 Only support CentOS 6.0+
 
