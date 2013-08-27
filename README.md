@@ -23,10 +23,14 @@ sh oneclickss.sh serverport localport password
 
 客户端下载：http://sourceforge.net/projects/shadowsocksgui/files/dist/
 
-winxp:http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.3.1-win-ia32.7z/download
+winxp => http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.3.1-win-ia32.7z/download
 
-osx:http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.3.1-osx-ia32.7z/download
+osx => http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.3.1-osx-ia32.7z/download
 
-linux:http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.1.3-linux-ia32.7z/download
+linux => http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.1.3-linux-ia32.7z/download
+
+浏览器插件：
+chrome:SwitchySharp
+firefox:AutoProxy
 
 如有错漏，欢迎大家修改或来信告知...
