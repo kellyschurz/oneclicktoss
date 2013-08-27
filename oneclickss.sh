@@ -58,7 +58,6 @@ echo "Rename to node and shadowsocks success"
 
 CONFIGPATH=$(pwd)/shadowsocks/config.json
 echo "Your config path is $CONFIGPATH"
-#cp ./shadowsocks/config.json $CONFIGPATH
 
 SERVERIP=$(ifconfig | grep "inet addr" | awk '{print $2}'| cut -d ':' -f 2 | grep -v 127.0.0.1 | head -n 1)
 sed "s/127\.0\.0\.1/$SERVERIP/g" -i $CONFIGPATH
