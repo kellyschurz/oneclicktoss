@@ -11,6 +11,17 @@ LANG=C
 export PATH
 export LANG
 
+if [ $1 = "uninstall" ];
+then
+echo "Uninstall all node and shadowsocks"
+rm -rf ./node* ./shadowsocks* >> installss.log 2>&1
+sed -i '/ssserver/d' /etc/rc.d/rc.local >> installss.log 2>&1
+kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> installss.log 2>&1
+rm -rf ./installss.log
+echo "Unnstall success"
+exit 0
+fi
+
 SERVERPORT=$1
 LOCALPORT=$2
 PASSWORD=$3
