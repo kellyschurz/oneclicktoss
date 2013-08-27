@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script function : One click to install shadowscoks.
-# Script version : 0.1
+# Script version : 1.0
 # Author : yoo@yoo.hk
 # Made : 2013.08.27
 # Support : Only CentOS 6.0+
