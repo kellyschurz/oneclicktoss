@@ -5,9 +5,9 @@ oneclicktoss V1.0
 
 Only support CentOS 6.0+
 
-在你想要安装的目录中：
+在你想要安装的目录中，下载脚本到当前目录：
 
-wget https://raw.github.com/kellyschurz/oneclicktoss/master/oneclickss.sh    //下载脚本到当前目录
+wget https://raw.github.com/kellyschurz/oneclicktoss/master/oneclickss.sh
 
 注意：请进入脚本所在目录执行本脚本，否则会出错！
 
