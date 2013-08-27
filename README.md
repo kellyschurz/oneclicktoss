@@ -1,7 +1,10 @@
 oneclicktoss
 ============
 oneclicktoss V0.1
-默认服务器端口：8989 默认客户端端口：1999 默认密码：yoofuckgfw
+
+默认服务器端口：8989 
+默认客户端端口：1999 
+默认密码：yoofuckgfw
 
 不建议使用默认设置...
 
