@@ -47,4 +47,8 @@ firefox：AutoProxy
 
 sh oneclickss.sh uninstall
 
+小技巧（仅供尝试）：挂载200m内存到/tmp目录，然后在/tmp目录安装，效率更佳；小内存请勿操作！
+
+mount tmpfs /tmp -t tmpfs -o size=200m
+
 如有错漏，欢迎大家修改或邮件告知...
