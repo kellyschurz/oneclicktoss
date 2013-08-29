@@ -67,10 +67,10 @@ sed "s/8388/$SERVERPORT/g" -i $CONFIGPATH
 echo "Your server port is $SERVERPORT"
 
 sed "s/1080/$LOCALPORT/g" -i $CONFIGPATH
-echo "Your local port is $LOCALPORT"
+echo "Your proxy port is $LOCALPORT"
 
 sed "s/barfoo\!/$PASSWORD/g" -i $CONFIGPATH
-echo "Your password is $PASSWORD"
+echo "Your encryption method AES-256-CFB password is $PASSWORD"
 
 echo "$(pwd)/node/bin/node $(pwd)/shadowsocks/bin/ssserver > /dev/null 2>&1 &" >> /etc/rc.d/rc.local
 source /etc/rc.d/rc.local
