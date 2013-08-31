@@ -1,7 +1,7 @@
 oneclicktoss
 ============
 
-oneclicktoss V1.0
+oneclicktoss v1.0
 
 Only support CentOS 6.0+
 
@@ -9,7 +9,7 @@ Only support CentOS 6.0+
 
 wget https://raw.github.com/kellyschurz/oneclicktoss/master/oneclickss.sh
 
-注意：请进入脚本所在目录执行本脚本，否则会出错！
+注意：请进入脚本所在目录以root权限执行本脚本，否则会出错！
 
 直接使用，不加参数则是默认设置安装：
 
@@ -52,3 +52,11 @@ sh oneclickss.sh uninstall
 mount tmpfs /tmp -t tmpfs -o size=200m
 
 如有错漏，欢迎大家修改或邮件告知...
+
+温馨提醒：为保证链接的有效性，自动安装的nodejs和shadowsocks可能是较旧的版本；
+
+另外，本人未更动以上两个软件的任何细节，可以放心使用...绿色安装，绿色卸载
+
+最新的shadowsocks由http://www.shadowsocks.org/支持；
+
+最新的nodejs由http://nodejs.org/支持
