@@ -57,6 +57,6 @@ mount tmpfs /tmp -t tmpfs -o size=200m
 
 另外，本人未更动以上两个软件的任何细节，可以放心使用...绿色安装，绿色卸载
 
-最新的shadowsocks由http://www.shadowsocks.org/支持；
+最新的shadowsocks由 http://www.shadowsocks.org/ 支持；
 
-最新的nodejs由http://nodejs.org/支持
+最新的nodejs由 http://nodejs.org/ 支持
