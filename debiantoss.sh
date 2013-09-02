@@ -38,7 +38,7 @@ PASSWORD="yoofuckgfw"
 echo "Your setting is default"
 fi
 
-yum -y install wget unzip >> installss.log 2>&1
+apt-get -y install wget unzip >> installss.log 2>&1
 echo "Install environment success"
 
 wget https://raw.github.com/kellyschurz/oneclicktoss/master/node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
