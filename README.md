@@ -75,8 +75,8 @@ linux客户端可以使用自身带有的代理上网，配置其代理也是为
 
 温馨提醒：为保证链接的有效性，自动安装的nodejs和shadowsocks可能是较旧的版本；另外，本人未更动以上两个软件的任何细节，可以放心使用...绿色安装，绿色卸载
 
-#最新的shadowsocks由 http://www.shadowsocks.org/ 支持；
+最新的shadowsocks由 http://www.shadowsocks.org/ 支持；
 
-#最新的nodejs由 http://nodejs.org/ 支持；
+最新的nodejs由 http://nodejs.org/ 支持；
 
 如有错漏，欢迎大家修改或邮件告知...
