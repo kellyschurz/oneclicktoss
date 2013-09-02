@@ -3,7 +3,7 @@
 # Script version : 1.0
 # Author : yoo@yoo.hk
 # Made : 2013.08.27
-# Support : Only CentOS 6.0+
+# Support : Only Debian 6.0+
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 LANG=C
@@ -15,7 +15,7 @@ if [ $1 = "uninstall" ] >> installss.log 2>&1 ;
 then
 echo "Uninstall all node and shadowsocks"
 rm -rf ./node* ./shadowsocks* >> installss.log 2>&1
-sed -i '/ssserver/d' /etc/rc.d/rc.local >> installss.log 2>&1
+sed -i '/ssserver/d' /etc/rc.local >> installss.log 2>&1
 kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> installss.log 2>&1
 rm -rf ./installss.log
 echo "Uninstall success"
@@ -59,7 +59,7 @@ echo "Rename to node and shadowsocks success"
 CONFIGPATH=$(pwd)/shadowsocks/config.json
 echo "Your config path is $CONFIGPATH"
 
-SERVERIP=$(ifconfig | grep "inet addr" | awk '{print $2}'| cut -d ':' -f 2 | grep -v 127.0.0.1 | head -n 1)
+SERVERIP=$(ifconfig | grep "inet addr" | awk '{print $2}'| cut -d ':' -f 2 | grep -v 127.0.0 | head -n 1)
 sed "s/127\.0\.0\.1/$SERVERIP/g" -i $CONFIGPATH
 echo "Your server ip is $SERVERIP"
 
@@ -72,7 +72,8 @@ echo "Your proxy port is $LOCALPORT"
 sed "s/barfoo\!/$PASSWORD/g" -i $CONFIGPATH
 echo "Your encryption method AES-256-CFB password is $PASSWORD"
 
-echo "$(pwd)/node/bin/node $(pwd)/shadowsocks/bin/ssserver > /dev/null 2>&1 &" >> /etc/rc.d/rc.local
-source /etc/rc.d/rc.local
+sed -i '/exit/d' /etc/rc.local >> installss.log 2>&1
+echo "$(pwd)/node/bin/node $(pwd)/shadowsocks/bin/ssserver > /dev/null 2>&1 &" >> /etc/rc.local
+source /etc/rc.local
 
 echo "End success"
