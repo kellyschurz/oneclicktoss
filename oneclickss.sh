@@ -16,17 +16,19 @@ then
 echo "Uninstall all node and shadowsocks"
 rm -rf ./node* ./shadowsocks* >> installss.log 2>&1
 sed -i '/ssserver/d' /etc/rc.d/rc.local >> installss.log 2>&1
+sed -i '/oneclickss/d' /etc/crontab >> installss.log 2>&1
 kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> installss.log 2>&1
 rm -rf ./installss.log
+service crond restart >> installss.log 2>&1
 echo "Uninstall success"
 exit 0
 fi
 
-if [ $1 = "restart" ] >> installss.log 2>&1 ;
+if [ $1 = "restart" ] >> /dev/null 2>&1 ;
 then
 echo "restart all node and shadowsocks"
-kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> installss.log 2>&1
-source /etc/rc.d/rc.local >> installss.log 2>&1
+kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> /dev/null 2>&1
+source /etc/rc.d/rc.local >> /dev/null 2>&1
 echo "Restart success"
 exit 0
 fi
@@ -86,6 +88,7 @@ source /etc/rc.d/rc.local >> installss.log 2>&1
 echo "Add to powerboot success"
 
 echo "*  1  *  *  * root sh $(pwd)/oneclickss.sh restart" >> /etc/crontab
+service crond restart >> installss.log 2>&1
 echo "Add to auto reboot success"
 
 echo "End success"
