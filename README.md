@@ -31,7 +31,9 @@ sh debiantoss.sh
 
 不建议使用默认设置...
 
-自定义三个参数分别是服务器端口、本地端口、自定义密码：（执行脚本后，会全自动安装以及加入开机启动并运行shadowscoks，之后本机使用客户端软件即科学上网。）
+自定义三个参数分别是服务器端口、本地端口、自定义密码：
+
+（执行脚本后，会全自动安装以及加入开机启动并运行shadowscoks，之后本机使用客户端软件即科学上网。）
 
 sh oneclickss.sh serverport localport password
 
@@ -74,6 +76,8 @@ linux客户端可以使用自身带有的代理上网，配置其代理也是为
 原理：本地全局代理软件将所有信息转发到ss监听的本地ip和端口，ss监听后外发。
 
 温馨提醒：为保证链接的有效性，自动安装的nodejs和shadowsocks可能是较旧的版本；另外，本人未更动以上两个软件的任何细节，可以放心使用...绿色安装，绿色卸载
+
+注：oneclickss.sh 增加了sh oneclickss.sh restart 功能，并加入了每日凌晨1点自动重启ss的功能；
 
 最新的shadowsocks由 http://www.shadowsocks.org/ 支持；
 
