@@ -18,8 +18,8 @@ rm -rf ./node* ./shadowsocks* >> installss.log 2>&1
 sed -i '/ssserver/d' /etc/rc.d/rc.local >> installss.log 2>&1
 sed -i '/oneclickss/d' /etc/crontab >> installss.log 2>&1
 kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> installss.log 2>&1
-rm -rf ./installss.log
 service crond restart >> installss.log 2>&1
+rm -rf ./installss.log
 echo "Uninstall success"
 exit 0
 fi
