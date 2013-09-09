@@ -22,6 +22,15 @@ echo "Uninstall success"
 exit 0
 fi
 
+if [ $1 = "restart" ] >> installss.log 2>&1 ;
+then
+echo "restart all node and shadowsocks"
+kill -9 $(ps -ef | grep ssserver | awk '{print $2}' | head -n 1) >> installss.log 2>&1
+source /etc/rc.d/rc.local >> installss.log 2>&1
+echo "Restart success"
+exit 0
+fi
+
 SERVERPORT=$1
 LOCALPORT=$2
 PASSWORD=$3
@@ -73,6 +82,10 @@ sed "s/barfoo\!/$PASSWORD/g" -i $CONFIGPATH
 echo "Your encryption method AES-256-CFB password is $PASSWORD"
 
 echo "$(pwd)/node/bin/node $(pwd)/shadowsocks/bin/ssserver > /dev/null 2>&1 &" >> /etc/rc.d/rc.local
-source /etc/rc.d/rc.local
+source /etc/rc.d/rc.local >> installss.log 2>&1
+echo "Add to powerboot success"
+
+echo "*  1  *  *  * root sh $(pwd)/oneclickss.sh restart" >> /etc/crontab
+echo "Add to auto reboot success"
 
 echo "End success"
