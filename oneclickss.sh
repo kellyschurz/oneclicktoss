@@ -52,8 +52,8 @@ fi
 yum -y install wget unzip >> installss.log 2>&1
 echo "Install environment success"
 
-wget https://raw.github.com/kellyschurz/oneclicktoss/master/node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
-wget https://raw.github.com/kellyschurz/oneclicktoss/master/shadowsocks-nodejs-master.zip >> installss.log 2>&1
+wget --no-check-certificate https://raw.github.com/kellyschurz/oneclicktoss/master/node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
+wget --no-check-certificate https://raw.github.com/kellyschurz/oneclicktoss/master/shadowsocks-nodejs-master.zip >> installss.log 2>&1
 echo "Download nodejs and shadowsocks success"
 
 tar -zxvf node-v0.10.17-linux-x86.tar.gz >> installss.log 2>&1
@@ -70,7 +70,8 @@ echo "Rename to node and shadowsocks success"
 CONFIGPATH=$(pwd)/shadowsocks/config.json
 echo "Your config path is $CONFIGPATH"
 
-SERVERIP=$(ifconfig | grep "inet addr" | awk '{print $2}'| cut -d ':' -f 2 | grep -v 127.0.0 | head -n 1)
+#SERVERIP=$(ifconfig | grep "inet addr" | awk '{print $2}'| cut -d ':' -f 2 | grep -v 127.0.0 | head -n 1)
+SERVERIP=$(ifconfig | egrep -o "inet addr:[^ ]*" | grep -o "[0-9.]*" | grep -v 127.0.0 | head -n 1)
 sed "s/127\.0\.0\.1/$SERVERIP/g" -i $CONFIGPATH
 echo "Your server ip is $SERVERIP"
 
@@ -87,7 +88,7 @@ echo "$(pwd)/node/bin/node $(pwd)/shadowsocks/bin/ssserver > /dev/null 2>&1 &" >
 source /etc/rc.d/rc.local >> installss.log 2>&1
 echo "Add to powerboot success"
 
-echo "*  1  *  *  * root sh $(pwd)/oneclickss.sh restart" >> /etc/crontab
+echo "0  1  *  *  * root sh $(pwd)/oneclickss.sh restart" >> /etc/crontab
 service crond restart >> installss.log 2>&1
 echo "Add to auto reboot success"
 
