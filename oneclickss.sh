@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script function : One click to install shadowscoks.
-# Script version : 1.0
-# Author : yoo@yoo.hk
+# Script version : 1.1
+# Author : null
 # Made : 2013.08.27
 # Support : Only CentOS 6.0+
 
@@ -43,9 +43,9 @@ service iptables stop >> installss.log 2>&1
 if [ $# -ne 3 ];
 then
 echo "You do not enter your setting like => sh oneclickss.sh serverport localport password"
-SERVERPORT=8989
+SERVERPORT=1998
 LOCALPORT=1999
-PASSWORD="yoofuckgfw"
+PASSWORD="ilovechina"
 echo "Your setting is default"
 fi
 
