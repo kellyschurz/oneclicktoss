@@ -9,11 +9,11 @@ debiantoss.sh support DebianOS 6.0+
 
 在你想要安装的目录中，下载脚本到当前目录：（注意：请进入脚本所在目录以root权限执行本脚本，否则会出错！）
 
-wget https://raw.github.com/kellyschurz/oneclicktoss/master/oneclickss.sh
+wget --no-check-certificate https://raw.github.com/kellyschurz/oneclicktoss/master/oneclickss.sh
 
 ---或者---
 
-wget https://raw.github.com/kellyschurz/oneclicktoss/dev/debiantoss.sh
+wget --no-check-certificate https://raw.github.com/kellyschurz/oneclicktoss/dev/debiantoss.sh
 
 直接使用，不加参数则是默认设置安装：
 
@@ -23,11 +23,11 @@ sh oneclickss.sh
 
 sh debiantoss.sh
 
-默认服务器端口：8989
+默认服务器端口：1998
 
 默认客户端端口：1999
 
-默认密码：yoofuckgfw
+默认密码：ilovechina
 
 不建议使用默认设置...
 
@@ -83,4 +83,4 @@ linux客户端可以使用自身带有的代理上网，配置其代理也是为
 
 最新的nodejs由 http://nodejs.org/ 支持；
 
-如有错漏，欢迎大家修改或邮件告知...
+如有错漏，欢迎大家自行修改...
